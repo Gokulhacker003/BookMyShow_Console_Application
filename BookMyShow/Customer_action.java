@@ -202,7 +202,7 @@ class Customer_action {
             System.out.println("Enter the valid input");
         }
         while (true) {
-            LocalDate newdate;
+            LocalDate newdate = null;
             String loc;
             if (check == 1) { // If user wants to change location
                 System.out.print("Enter Your new Location:");
@@ -214,12 +214,20 @@ class Customer_action {
                 customer.setLocation(loc); // Set the new location for the customer
                 System.out.println("Your Location is changed.");
             } else if (check == 2) { // If user wants to change date
-                System.out.print("Enter the new Date(yyyy-mm-dd):");
+                System.out.print("Enter the new Date(dd-MM-YYYY):");
                 String dat = scanner.nextLine();
-                newdate = LocalDate.parse(dat, BookMyShow_POJO.getDateFormat()); // Parse the new date
-                if (newdate.isAfter(customer.getDate())) {
-                    System.out.println("Invalid Date");
-                    continue;
+                int count=0;
+                while (count<3){
+                    try {
+                        newdate = LocalDate.parse(dat, BookMyShow_POJO.getDateFormat()); // Parse the new date
+                        break;
+                    } catch (Exception e) {
+                        System.out.println("Invalid Date!");
+                        count++;
+                        if (count==3){
+                            return;
+                        }
+                    }
                 }
                 customer.setDate(newdate); // Set the new date
                 System.out.println("Your Date is changed.");
@@ -269,7 +277,14 @@ class Customer_action {
                     System.out.println(seats.getKey() + " " + seats.getValue());
                 }
                 System.out.print("Enter the no.of seats to book:");
-                int seats_counts=Integer.parseInt(scanner.nextLine());//get the input from user and it is used to no of seats
+                int seats_counts;
+                try{
+                    seats_counts = Integer.parseInt(scanner.nextLine());//get the input from user and it is used to no of seats
+                }
+                catch (Exception e){
+                    System.out.println("Invalid input!");
+                    continue;
+                }
                 int price=seats_counts* current_show.getPrice();//it is used to calculate the total price of seats
                 var Bookedtickets=select_seats(seats_counts,current_show);//it is used to store a booked tickets
                 for(var movie:movies){//it used to display the total price and booked seats
