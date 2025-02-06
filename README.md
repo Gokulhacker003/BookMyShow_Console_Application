@@ -3,6 +3,10 @@
 ## Overview
 BookMyShow Console Application is a command-line-based ticket booking system developed in **Java** that allows users to browse, select, and book movie tickets. This project demonstrates core Java programming concepts, including file handling, object-oriented programming, and user authentication. **This version of the application does not use a database and relies solely on file handling for data storage.**
 
+## Class Diagram
+![Untitled-2025-01-30-1203](https://github.com/user-attachments/assets/cc75b63d-f89f-4310-8149-06e0e30a9b49)
+
+
 ## Features
 - **User Authentication**: Register and login functionality with password validation.
 - **Movie Listings**: View available movies with show timings.
