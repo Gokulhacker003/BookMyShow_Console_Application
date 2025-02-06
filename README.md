@@ -75,9 +75,6 @@ BookMyShow_Console_Application/
 ## Contributing
 Contributions are welcome! Feel free to fork the repository, create a feature branch, and submit a pull request.
 
-## License
-This project is licensed under the MIT License.
-
 ## Contact
 For any queries, reach out to [Gokulhacker003](https://github.com/Gokulhacker003).
 
