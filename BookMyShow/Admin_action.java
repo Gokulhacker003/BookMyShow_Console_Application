@@ -143,8 +143,19 @@ public class Admin_action {
         }
 
         // Prompt the user to enter the number of screens in the theatre
-        System.out.print("Enter the number of Screens: ");
-        int numScreens = Integer.parseInt(scanner.nextLine());
+        int numScreens=0;
+        int count=0;
+        while (count<3){
+            try{
+                System.out.print("Enter the number of Screens: ");
+                numScreens = Integer.parseInt(scanner.nextLine());
+                break;
+            }
+            catch (Exception e){
+                System.out.println("Invaild input!");
+                count++;
+            }
+        }
 
         // Create a map to store screen details
         HashMap<String, Screen> screenMap = new HashMap<>();
@@ -155,8 +166,16 @@ public class Admin_action {
             String screenName = scanner.nextLine();
 
             // Prompt for the number of seats in the screen
-            System.out.print("Enter the number of Seats: ");
-            int numSeats = Integer.parseInt(scanner.nextLine());
+
+            int numSeats =0;
+            try {
+                System.out.print("Enter the number of Seats: ");
+                numSeats = Integer.parseInt(scanner.nextLine());
+            }
+            catch (Exception e){
+                System.out.println("Invaild input!");
+                continue;
+            }
 
             // Prompt for the seating grid format
             System.out.print("Enter the grid (e.g., 2*4*2): ");
@@ -279,11 +298,24 @@ public class Admin_action {
             }
 
             // Get movie duration and price per seat
-            System.out.print("Enter the Duration: ");
-            int duration = Integer.parseInt(scanner.nextLine());
+            int duration=0;
+                try {
+                    System.out.print("Enter the Duration: ");
+                    duration = Integer.parseInt(scanner.nextLine());
+                } catch (Exception e) {
+                    System.out.println("Invalid input");
+                    return;
+                }
 
-            System.out.print("Enter the price per seat: ");
-            int pr_amount = Integer.parseInt(scanner.nextLine());
+            int pr_amount=0;
+            try {
+                System.out.print("Enter the price per seat: ");
+                pr_amount = Integer.parseInt(scanner.nextLine());
+            }
+            catch (Exception e){
+                System.out.println("Invalid input!");
+                return;
+            }
 
             // Display available theatres in the specified location
             System.out.println("Available Theatres in Location:");
