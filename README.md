@@ -5,80 +5,94 @@ BookMyShow Console Application is a command-line-based ticket booking system dev
 
 ## Class Diagram
 ![Untitled-2025-01-30-1203](https://github.com/user-attachments/assets/cc75b63d-f89f-4310-8149-06e0e30a9b49)
-
-
 ## Features
-- **User Authentication**: Register and login functionality with password validation.
-- **Movie Listings**: View available movies with show timings.
-- **Seat Selection**: Choose seats based on real-time availability.
-- **Ticket Booking**: Reserve tickets and generate a booking confirmation.
-- **Payment Simulation**: Basic payment validation (mock implementation).
-- **Admin Panel**: Manage movies, schedules, and bookings.
-- **Data Persistence**: Uses file handling and serialization for storing data.
+- View available movies and show timings
+- Book movie tickets
+- Cancel bookings
+- Display booking details
+- User-friendly CLI interface
+- Seat selection functionality
+- Admin panel for managing movies and shows
 
 ## Technologies Used
-- **Programming Language**: Java
-- **File Handling**: Used for storing user data and booking details.
-- **Java I/O Streams**: For efficient data management.
-- **OOP Principles**: Follows Object-Oriented Programming best practices.
-
-## Installation & Setup
-### Prerequisites
-- Java Development Kit (JDK) 8 or higher
-- Git (for cloning the repository)
-
-### Steps to Install
-1. Clone the repository:
-   ```sh
-   git clone git@github.com:Gokulhacker003/BookMyShow_Console_Application.git
-   ```
-2. Navigate to the project folder:
-   ```sh
-   cd BookMyShow_Console_Application
-   ```
-3. Compile the Java files:
-   ```sh
-   javac -d bin src/*.java
-   ```
-4. Run the application:
-   ```sh
-   java -cp bin Main
-   ```
-
-## Usage
-1. Run the application from the terminal.
-2. Choose an option from the menu (Login/Register/View Movies/etc.).
-3. Browse available movies and select one.
-4. Choose seats and confirm your booking.
-5. Receive a booking confirmation with ticket details.
-6. Exit the application or continue browsing.
+- Programming Language: Java
+- Data Storage: File-based (TXT/JSON/CSV)
+- Development Environment: Windows/Linux
 
 ## Project Structure
 ```
 BookMyShow_Console_Application/
 │── src/
-│   ├── Main.java
-│   ├── User.java
-│   ├── Movie.java
-│   ├── Booking.java
-│   ├── Payment.java
-│   ├── Admin.java
-│   └── utils/
-│── bin/ (Compiled files)
+│   ├── BookMyshow/
+│   │   ├── Admin_action.java
+│   │   ├── BookMyShow_Main.java
+│   │   ├── BookMyShow_Ops.java
+│   │   ├── BookMyShow_POJO.java
+│   │   ├── Customer_action.java
+│   │   ├── Utilities.java
+│   │   ├── Utility.java
+│   │
+│   ├── BookMyshow/Action/
+│   │   ├── Action.java
+│   │   ├── Admin_Action.java
+│   │   ├── Customer_Action.java
+│   │
+│   ├── BookMyshow/Movie/
+│   │   ├── Movie.java
+│   │
+│   ├── BookMyshow/Screen/
+│   │   ├── Screen.java
+│   │
+│   ├── BookMyshow/Show/
+│   │   ├── Show.java
+│   │
+│   ├── BookMyshow/Theatre/
+│   │   ├── Theatre_POJO.java
+│   │
+│   ├── BookMyshow/Ticket/
+│   │   ├── Ticket.java
+│   │
+│   ├── BookMyshow/User/
+│   │   ├── Admin.java
+│   │   ├── Customer.java
+│   │   ├── User.java
+│── data/
 │── README.md
 │── LICENSE
+│── .gitignore
 ```
 
+## Class Diagram
+![Class Diagram](https://github.com/user-attachments/assets/cc75b63d-f89f-4310-8149-06e0e30a9b49)
+
+## Installation & Usage
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/Gokulhacker003/BookMyShow_Console_Application.git
+   ```
+2. Navigate to the project folder:
+   ```sh
+   cd BookMyShow_Console_Application
+   ```
+3. Compile the source code:
+   ```sh
+   javac -d bin src/**/*.java
+   ```
+4. Run the application:
+   ```sh
+   java -cp bin BookMyshow.BookMyShow_Main
+   ```
+
 ## Future Enhancements
-- Integrate a real-time database (MySQL) for better data management.
-- Implement an online payment gateway.
-- Add a graphical user interface (GUI) using JavaFX or Swing.
-- Enhance security measures with encryption for user authentication.
-- Improve reporting and analytics for admins.
+- Implement a database for better data management
+- Add user authentication
+- Integrate payment gateway
+- Improve UI/UX for better user experience
+- Add real-time seat availability tracking
 
 ## Contributing
-Contributions are welcome! Feel free to fork the repository, create a feature branch, and submit a pull request.
+Contributions are welcome! Feel free to fork the repository and submit pull requests.
 
 ## Contact
-For any queries, reach out to [Gokulhacker003](https://github.com/Gokulhacker003).
+For any queries, reach out to [Gokul R.](gokulgokul6547@gmail.com).
 
