@@ -62,9 +62,6 @@ BookMyShow_Console_Application/
 │── .gitignore
 ```
 
-## Class Diagram
-![Class Diagram](https://github.com/user-attachments/assets/cc75b63d-f89f-4310-8149-06e0e30a9b49)
-
 ## Installation & Usage
 1. Clone the repository:
    ```sh
